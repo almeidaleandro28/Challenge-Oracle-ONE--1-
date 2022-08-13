@@ -62,4 +62,22 @@ body {
   background-color: #F3F5FC;
 }
 
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* section left*/
+.left {
+  flex: 1;
+}
+
+/* section right */
+.right {
+  flex: 1;
+}
+
+/*# sourceMappingURL=style.css.map */
+
 /*# sourceMappingURL=style.css.map */

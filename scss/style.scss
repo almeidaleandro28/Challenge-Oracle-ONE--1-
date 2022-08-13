@@ -4,5 +4,36 @@
 
 body {
   background-color: $light-blue-500;
-  
 }
+
+.main {
+
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+/* section left*/
+.left{
+  flex: 1;
+}
+
+.brand{
+  .logo{}
+}
+
+.text {
+  .textarea {
+    
+  }
+}
+
+
+/* section right */
+.right {
+  flex: 1;
+}
+/*# sourceMappingURL=style.css.map */
