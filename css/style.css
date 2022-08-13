@@ -73,6 +73,10 @@ body {
   flex: 1;
 }
 
+.brand {
+  width: max-content;
+  padding: 40px 0px 0px 84px;
+}
 /* section right */
 .right {
   flex: 1;
