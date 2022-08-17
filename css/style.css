@@ -62,10 +62,21 @@ body {
   background-color: #F3F5FC;
 }
 
-.container {
+.btn {
+  border-radius: 24px;
+  padding: 6px 24px;
+}
+
+.main {
   display: flex;
   flex-direction: row;
   width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 /* section left*/
@@ -77,6 +88,32 @@ body {
   width: max-content;
   padding: 40px 0px 0px 84px;
 }
+.text {
+  flex: 1;
+  padding-left: 150px;
+  padding-top: 30px;
+}
+.text .textarea {
+  border: none;
+  padding: 0px 0px 0px 50px;
+  justify-self: center;
+  width: 680px;
+  height: 48px;
+}
+
+.buttons {
+  flex: 1;
+  padding-left: 150px;
+}
+.buttons .btn-encrypt {
+  background-color: #0A3871;
+  color: #ffffff;
+}
+.buttons .btn-decrypt {
+  background-color: #F3F5FC;
+  color: #0A3871;
+}
+
 /* section right */
 .right {
   flex: 1;
