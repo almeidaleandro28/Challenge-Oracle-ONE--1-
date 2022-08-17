@@ -117,8 +117,15 @@ body {
 
 /* section right */
 .right {
+  flex: 1;
   background-color: #ffffff;
   height: 100%;
+  width: 100%;
 }
+
+.text-change{
+  display: none;
+}
+
 
 /*# sourceMappingURL=style.css.map */
