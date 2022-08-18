@@ -29,11 +29,24 @@ const encrypt = () => {
 	
 }
 
+const decrypty = () => {
+	const textDecrypt = textArea.value.replace(/enter/g, "e").
+																			replace(/imes/g, "i").
+																			replace(/ai/g, "a").
+																			replace(/ober/g, "o").
+																			replace(/ufat/g, "u");
+	text.innerHTML = textDecrypt;
+}
+
+// btn actions
 btnEncrypt.addEventListener( "click",  function() {
   changeDisplay();
 	encrypt();
-	
+});
 
+btnDecrypt.addEventListener( "click", function() {
+	changeDisplay();
+	decrypty();
 });
 
 
