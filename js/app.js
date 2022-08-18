@@ -3,6 +3,7 @@ const text = document.querySelector(".text-result");
 
 const btnEncrypt = document.querySelector(".btn-encrypt");
 const btnDecrypt = document.querySelector(".btn-decrypt");
+const btnCopy = document.querySelector(".btn-copy"); 
 
 const rightHeader = document.querySelector(".right-header");
 const rightFooter = document.querySelector(".right-footer");
@@ -13,6 +14,7 @@ const changeDisplay = () => {
   rightFooter.style.display = "none";
   rightHeader.style.display = "none";
   textTransform.style.display = "block";
+	btnCopy.style.display = "block";
 }
 // A letra "e" é convertida para "enter"
 // A letra "i" é convertida para "imes"
@@ -38,6 +40,12 @@ const decrypty = () => {
 	text.innerHTML = textDecrypt;
 }
 
+const copyText = () => {
+	textArea.select();
+	navigator.clipboard.writeText(textArea.value);
+
+}
+
 // btn actions
 btnEncrypt.addEventListener( "click",  function() {
   changeDisplay();
@@ -49,5 +57,7 @@ btnDecrypt.addEventListener( "click", function() {
 	decrypty();
 });
 
-
+btnCopy.addEventListener( "click", function() {
+	copyText();
+} );
 
