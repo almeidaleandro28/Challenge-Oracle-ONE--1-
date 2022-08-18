@@ -40,11 +40,6 @@ const decrypty = () => {
 	text.innerHTML = textDecrypt;
 }
 
-const copyText = () => {
-	textArea.select();
-	navigator.clipboard.writeText(textArea.value);
-
-}
 
 // btn actions
 btnEncrypt.addEventListener( "click",  function() {
@@ -56,6 +51,12 @@ btnDecrypt.addEventListener( "click", function() {
 	changeDisplay();
 	decrypty();
 });
+
+const copyText = () => {
+	text.select();
+	navigator.clipboard.writeText(text.value);
+}
+
 
 btnCopy.addEventListener( "click", function() {
 	copyText();
