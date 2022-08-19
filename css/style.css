@@ -61,11 +61,16 @@ table {
 body {
   background-color: #F3F5FC;
   height: 100vh;
+  overflow: hidden;
 }
 
 .btn {
   border-radius: 24px;
   padding: 6px 24px;
+}
+
+textarea {
+  border: none;
 }
 
 .main {
@@ -121,8 +126,32 @@ body {
   flex: 1;
   height: 100%;
 }
-.right .btn-copy {
+
+.text-change {
+  text-align: center;
+}
+.text-change .text-resul {
+  padding-bottom: 50px;
+}
+
+.right-header {
+  text-align: center;
+}
+
+.right-footer {
+  text-align: center;
+}
+.right-footer h2 {
+  padding-bottom: 1rem;
+}
+.right-footer h3 {
+  padding-bottom: 1rem;
+}
+
+.btn-copy {
+  background-color: #ffffff;
   display: none;
+  margin: 26rem auto;
 }
 
 /*# sourceMappingURL=style.css.map */

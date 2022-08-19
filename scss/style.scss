@@ -5,13 +5,17 @@
 body {
   background-color: $light-blue-500;
   height: 100vh;
+  overflow: hidden;
 }
 
 // general
 .btn {
   border-radius: 24px;
   padding: 6px 24px;
-  
+}
+
+textarea {
+  border: none;
 }
 
 // main
@@ -75,9 +79,36 @@ body {
   background-color: $white;
   flex: 1;
   height: 100%;
-  .btn-copy {
-    display: none;
+  
+  
+}
+
+.text-change {
+  text-align: center;
+  .text-resul {  
+    padding-bottom: 50px;
   }
 }
 
+.right-header {
+  text-align: center;
+  
+}
+
+.right-footer {
+  text-align: center;
+  h2 {
+    padding-bottom: 1rem;
+  }
+  h3 {
+    padding-bottom: 1rem;
+  }
+}
+
+.btn-copy {
+  background-color: $white;
+  display: none;
+  // margin-top: 25rem;
+  margin: 26rem auto;
+}
 
