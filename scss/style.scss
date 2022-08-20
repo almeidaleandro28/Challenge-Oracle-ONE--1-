@@ -5,7 +5,7 @@
 body {
   background-color: $light-blue-500;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 // general
@@ -20,26 +20,31 @@ textarea {
   border: none;
 }
 
+section {
+  position: relative;
+}
+
 // main
 .main {
-  display: flex;
-  flex-direction: row;
   height: 100%;
 }
 // container
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   height: 100%;
-  
+  position: relative;
 }
 
 /* section left*/
-.left{
+.section-left{
   flex: 1;
+  flex-direction: column;
+  border: 1px solid black;
 }
 
 .brand{
+  flex: 1;
   width: max-content;
   padding: 40px 0px 0px 84px;
   .logo{}
@@ -77,20 +82,22 @@ textarea {
 
 
 /* section right */
-.right {
-  background-color: $white;
+.section-right {
+  height: 100%;
+  border: 1px solid black;
   display: flex;
-  margin-right: 140px;
-  margin-top: 40px;
-  flex-direction: column;
-  height: 750px;
-  width: 300px;
-  
+  align-items: center;
+}
+
+.container-right {
+  background-color: $white;
+  border-radius: 34px;
 }
 
 .text-change {
   text-align: center;
   flex: 2;
+  display: none;
   .text-resul {  
     padding-bottom: 50px;
   }
@@ -98,6 +105,11 @@ textarea {
 
 .right-header {
   text-align: center;
+  position: relative;
+  .message-img {
+    width: 100%;
+    height: auto;
+  }
   
 }
 
