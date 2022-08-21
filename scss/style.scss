@@ -20,9 +20,6 @@ textarea {
   border: none;
 }
 
-section {
-  position: relative;
-}
 
 // main
 .main {
@@ -32,19 +29,23 @@ section {
 .container {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   height: 100%;
   position: relative;
 }
 
 /* section left*/
 .section-left{
-  flex: 1;
+  display: flex;
+  flex: 2;
   flex-direction: column;
+  height: 100%;
   border: 1px solid black;
+
 }
 
 .brand{
-  flex: 1;
+ 
   width: max-content;
   padding: 40px 0px 0px 84px;
   .logo{}
@@ -52,10 +53,8 @@ section {
 
 .text {
   // width: max-content;
-  flex: 1;
-  padding-left: 150px;
-  padding-top: 30px;
   
+ 
   
   // padding: 168px 0px 0px 240px;
   .textarea {
@@ -68,8 +67,8 @@ section {
 }
 
 .buttons {
-  flex: 1;
-  padding-left: 150px;
+  
+ 
   .btn-encrypt{
     background-color: $dark-blue-300;
     color: $white;
@@ -83,15 +82,24 @@ section {
 
 /* section right */
 .section-right {
-  height: 100%;
   border: 1px solid black;
   display: flex;
-  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  
 }
 
 .container-right {
   background-color: $white;
   border-radius: 34px;
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  text-align: center;
+  height: 944px;
+  
 }
 
 .text-change {
