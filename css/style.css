@@ -149,6 +149,7 @@ textarea {
 .right-header {
   text-align: center;
   position: relative;
+  padding-top: 283px;
 }
 .right-header .message-img {
   width: 100%;
