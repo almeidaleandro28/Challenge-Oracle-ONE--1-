@@ -5,7 +5,7 @@
 body {
   background-color: $light-blue-500;
   height: 100vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 // general
@@ -20,26 +20,32 @@ textarea {
   border: none;
 }
 
+
 // main
 .main {
-  display: flex;
-  flex-direction: row;
   height: 100%;
 }
 // container
 .container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: wrap;
   height: 100%;
-  
+  position: relative;
 }
 
 /* section left*/
-.left{
-  flex: 1;
+.section-left{
+  display: flex;
+  flex: 2;
+  flex-direction: column;
+  height: 100%;
+  border: 1px solid black;
+
 }
 
 .brand{
+ 
   width: max-content;
   padding: 40px 0px 0px 84px;
   .logo{}
@@ -47,10 +53,8 @@ textarea {
 
 .text {
   // width: max-content;
-  flex: 1;
-  padding-left: 150px;
-  padding-top: 30px;
   
+ 
   
   // padding: 168px 0px 0px 240px;
   .textarea {
@@ -63,8 +67,8 @@ textarea {
 }
 
 .buttons {
-  flex: 1;
-  padding-left: 150px;
+  
+ 
   .btn-encrypt{
     background-color: $dark-blue-300;
     color: $white;
@@ -77,20 +81,31 @@ textarea {
 
 
 /* section right */
-.right {
-  background-color: $white;
+.section-right {
+  border: 1px solid black;
   display: flex;
-  margin-right: 140px;
-  margin-top: 40px;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1;
+  height: 100%;
+  
+}
+
+.container-right {
+  background-color: $white;
+  border-radius: 34px;
+  display: flex;
   flex-direction: column;
-  height: 750px;
-  width: 300px;
+  width: 400px;
+  text-align: center;
+  height: 944px;
   
 }
 
 .text-change {
   text-align: center;
   flex: 2;
+  display: none;
   .text-resul {  
     padding-bottom: 50px;
   }
@@ -98,6 +113,12 @@ textarea {
 
 .right-header {
   text-align: center;
+  position: relative;
+  padding-top: 283px;
+  .message-img {
+    width: 100%;
+    height: auto;
+  }
   
 }
 
