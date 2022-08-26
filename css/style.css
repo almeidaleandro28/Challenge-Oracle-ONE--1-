@@ -61,18 +61,20 @@ table {
 body {
   background-color: #F3F5FC;
   height: 100vh;
-  overflow-x: hidden;
 }
 
 .btn {
   border-radius: 24px;
-  padding: 6px 24px;
-  width: 328px;
+  padding: 12px 24px;
   height: fit-content;
 }
 
 textarea {
   border: none;
+}
+
+.pl {
+  padding-left: 5rem;
 }
 
 .main {
@@ -86,28 +88,35 @@ textarea {
   height: 100%;
   position: relative;
 }
-
 /* section left*/
 .section-left {
+  align-content: space-between;
   display: flex;
   flex: 2;
   flex-direction: column;
   height: 100%;
-  border: 1px solid black;
+  padding-top: 30px;
 }
-
-.brand {
-  width: max-content;
-  padding: 40px 0px 0px 84px;
+.text {
+  flex: 1;
 }
 .text .textarea {
+  background-color: #F3F5FC;
   border: none;
-  padding: 0px 0px 0px 50px;
-  justify-self: center;
-  width: 680px;
-  height: 48px;
+}
+.text .textarea:active {
+  border: none;
 }
 
+.buttons {
+  padding-bottom: 38px;
+}
+@media screen and (max-width: 594px) {
+  .buttons {
+    display: flex;
+    justify-content: center;
+  }
+}
 .buttons .btn-encrypt {
   background-color: #0A3871;
   color: #ffffff;
@@ -119,12 +128,13 @@ textarea {
 
 /* section right */
 .section-right {
-  border: 1px solid black;
   display: flex;
   flex-direction: row;
-  justify-content: center;
   flex: 1;
+  justify-content: center;
   height: 100%;
+  padding-top: 30px;
+  width: 100vw;
 }
 
 .container-right {
@@ -134,7 +144,12 @@ textarea {
   flex-direction: column;
   width: 400px;
   text-align: center;
-  height: 944px;
+  height: 95%;
+}
+@media screen and (max-width: 594px) {
+  .container-right {
+    width: 327px;
+  }
 }
 
 .text-change {
@@ -150,6 +165,11 @@ textarea {
   text-align: center;
   position: relative;
   padding-top: 283px;
+}
+@media screen and (max-width: 594px) {
+  .right-header {
+    display: none;
+  }
 }
 .right-header .message-img {
   width: 100%;
@@ -170,9 +190,9 @@ textarea {
   flex: 1;
   display: flex;
   justify-content: center;
+  align-items: flex-end;
 }
 .btn-container .btn-copy {
-  align-self: flex-start;
   background-color: #ffffff;
   display: none;
   margin-top: 62px;
