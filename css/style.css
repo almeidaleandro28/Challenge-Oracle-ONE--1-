@@ -154,4 +154,10 @@ body {
   display: none;
 }
 
+.btn-copy {
+  background-color: #ffffff;
+  color: #0A3871;
+  width: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */
