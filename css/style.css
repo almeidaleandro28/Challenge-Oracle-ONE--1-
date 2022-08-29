@@ -150,4 +150,8 @@ body {
   color: #343A40;
 }
 
+.output-text {
+  display: none;
+}
+
 /*# sourceMappingURL=style.css.map */
