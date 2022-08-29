@@ -7,7 +7,7 @@ const textArea = document.querySelector(".input-text");
 // output
 const outputText = document.querySelector(".output-text");
 // buttons
-const btnEncrypty =document.querySelector(".btn-encrypt")
+const btnEncrypty = document.querySelector(".btn-encrypt")
 const btnDecrypt = document.querySelector(".btn-decrypt");
 
 
@@ -27,4 +27,22 @@ const encrypty = () => {
 	outputText.innerHTML = textEncrypt; 
 }
 
-btnEncrypty.addEventListener( "click", () => changeDisplay(), encrypty());
+const decrypty = () => {
+	const textDecrypt = textArea.value.replace(/enter/g, "e").
+																			replace(/imes/g, "i").
+																			replace(/ai/g, "a").
+																			replace(/ober/g, "o").
+																			replace(/ufat/g, "u");
+  console.log( textDecrypt );
+	outputText.innerHTML = textDecrypt;
+}
+
+btnEncrypty.addEventListener( "click", function() {
+  changeDisplay();
+  encrypty();
+});
+
+btnDecrypt.addEventListener( "click", function() {
+  changeDisplay();
+  decrypty();
+});
