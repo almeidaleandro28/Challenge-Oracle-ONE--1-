@@ -9,6 +9,7 @@ const outputText = document.querySelector(".output-text");
 // buttons
 const btnEncrypty = document.querySelector(".btn-encrypt")
 const btnDecrypt = document.querySelector(".btn-decrypt");
+const btnCopy = document.querySelector(".btn-copy");
 
 
 const changeDisplay = () => {
@@ -37,6 +38,14 @@ const decrypty = () => {
 	outputText.innerHTML = textDecrypt;
 }
 
+const copy = () => {
+	outputText.select();
+	outputText.setSelectionRange(0, 99999)
+	navigator.clipboard.writeText(outputText.value);
+	console.log( outputText.value)
+}
+
+
 btnEncrypty.addEventListener( "click", function() {
   changeDisplay();
   encrypty();
@@ -45,4 +54,8 @@ btnEncrypty.addEventListener( "click", function() {
 btnDecrypt.addEventListener( "click", function() {
   changeDisplay();
   decrypty();
+});
+
+btnCopy.addEventListener( "click", function() {
+	copy();
 });
