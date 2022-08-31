@@ -2,6 +2,9 @@
 @import "variables";
 @import "responsive";
 
+html {
+  height: 100vh;
+}
 
 body {
   background-color: $white;
@@ -26,17 +29,20 @@ textarea {
 
 // container
 .container {
-  display: flex;
-  flex-direction: row;
-  margin: 0 auto;
-  max-width: 1200px;
-  height: 900px;
-  border: 1px solid #000000;
-  
+  @include screen( pc ) {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 1200px;
+    height: 900px;
+    border: 1px solid #000000;
+  }
 
   @include screen( tablet ) {
     margin: 0 auto;
     width: 90%;
+    display: flex;
+    flex-direction: column;
   }
 
   @include screen( mobile) {
@@ -50,7 +56,10 @@ textarea {
 
 // section left
 .left { 
-  flex: 1;
+  
+  @include screen( pc ) {
+    float: 1;
+  }
   @include screen( mobile ) {
     display: flex;
     flex-direction: column;
@@ -94,7 +103,9 @@ textarea {
 
 // section right
 .right {
-  flex: 1;
+  @include screen( pc ) {
+    flex: 1;
+  }
   @include screen( mobile ) {
     flex: 1;
     padding-left: 14px;

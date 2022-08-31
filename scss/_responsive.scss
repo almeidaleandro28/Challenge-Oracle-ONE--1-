@@ -5,7 +5,12 @@
     }
   }
   @if ( $device == tablet ) {
-    @media screen and ( max-width: 958px ) {
+    @media screen and ( max-width: 960px ) {
+      @content;
+    }
+  }
+  @if ( $device == pc ) {
+    @media screen and ( min-width: 1000px ) {
       @content;
     }
   }
