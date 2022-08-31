@@ -80,8 +80,12 @@ textarea {
 }
 
 .container {
-  max-width: 1200px;
+  display: flex;
+  flex-direction: row;
   margin: 0 auto;
+  max-width: 1200px;
+  height: 900px;
+  border: 1px solid #000000;
 }
 @media screen and (max-width: 958px) {
   .container {
@@ -99,6 +103,9 @@ textarea {
   }
 }
 
+.left {
+  flex: 1;
+}
 @media screen and (max-width: 594px) {
   .left {
     display: flex;
@@ -142,6 +149,9 @@ textarea {
   border: 1px solid #0A3871;
 }
 
+.right {
+  flex: 1;
+}
 @media screen and (max-width: 594px) {
   .right {
     flex: 1;
