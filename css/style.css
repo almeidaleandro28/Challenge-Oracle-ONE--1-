@@ -79,6 +79,16 @@ textarea {
   border: none;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 958px) {
+  .container {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
 @media screen and (max-width: 594px) {
   .container {
     display: flex;
@@ -108,6 +118,12 @@ textarea {
   width: 100%;
 }
 
+@media screen and (max-width: 958px) {
+  .buttons {
+    text-align: center;
+    padding: 1rem 0;
+  }
+}
 @media screen and (max-width: 594px) {
   .buttons {
     display: flex;
@@ -163,6 +179,7 @@ textarea {
 .btn-copy {
   background-color: #ffffff;
   color: #0A3871;
+  margin-bottom: 1rem;
   width: 100%;
 }
 

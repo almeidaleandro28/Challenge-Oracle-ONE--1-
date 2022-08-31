@@ -26,6 +26,14 @@ textarea {
 
 // container
 .container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  @include screen( tablet ) {
+    margin: 0 auto;
+    width: 90%;
+  }
+
   @include screen( mobile) {
     display: flex;
     flex-direction: column;
@@ -56,6 +64,10 @@ textarea {
 }
 
 .buttons {
+  @include screen( tablet ) {
+    text-align: center;
+    padding: 1rem 0;
+  }
   @include  screen( mobile ) {
     display: flex;
     flex-direction: column;
@@ -110,5 +122,6 @@ textarea {
 .btn-copy {
   background-color: $white;
   color: $dark-blue-300;
+  margin-bottom: 1rem;
   width: 100%;
 }
