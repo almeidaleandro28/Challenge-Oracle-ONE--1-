@@ -58,7 +58,10 @@ textarea {
 .left { 
   
   @include screen( pc ) {
-    float: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: 1
   }
   @include screen( mobile ) {
     display: flex;
@@ -68,6 +71,12 @@ textarea {
     padding-left: 14px;
     padding-right: 14px;
     padding-top: 20px;
+  }
+}
+
+.header {
+  @include screen( pc ) {
+    margin-top: 3rem;
   }
 }
 
@@ -105,6 +114,7 @@ textarea {
 .right {
   @include screen( pc ) {
     flex: 1;
+    
   }
   @include screen( mobile ) {
     flex: 1;
@@ -117,9 +127,27 @@ textarea {
   background-color: $white;
   border-radius: 24px;
   text-align: center;
+  @include screen( pc ) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+  }
+
+  .img {
+    width: 30%;
+    
+  }
+
   p {
     color: $gray-400;
   }
+
+  @include screen( pc ) {
+    margin-top: 3rem;
+    height: calc(100% - 3rem);
+  }
+
   @include screen( mobile ) {
     padding-top: 24px;
     padding-bottom: 24px;
@@ -142,4 +170,8 @@ textarea {
   color: $dark-blue-300;
   margin-bottom: 1rem;
   width: 100%;
+  display: none;
+  @include screen( pc ) {
+
+  }
 }

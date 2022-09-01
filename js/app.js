@@ -2,6 +2,8 @@
 const divShow = document.querySelector(".show");
 const subTitle = document.querySelector(".sub-title");
 const info = document.querySelector(".info");
+// img
+const img = document.querySelector(".img");
 // input
 const textArea = document.querySelector(".input-text");
 // output
@@ -15,7 +17,10 @@ const btnCopy = document.querySelector(".btn-copy");
 const changeDisplay = () => {
   subTitle.style.display = "none";
   info.style.display = "none";
-  outputText.style.display = "block";
+  img.style.display = "none";
+	btnCopy.style.display = "block";
+	outputText.style.display = "block";
+	
 }
 
 const encrypty = () => {
