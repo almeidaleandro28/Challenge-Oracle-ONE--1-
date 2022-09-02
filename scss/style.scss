@@ -1,6 +1,8 @@
+@use "sass:map";
 @import "reset";
 @import "variables";
 @import "responsive";
+
 
 html {
   height: 100vh;
@@ -130,13 +132,21 @@ textarea {
   @include screen( pc ) {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    
     
   }
 
   .img {
-    width: 30%;
-    
+    width: 40%;
+    display: block;
+    margin: 0 auto;
+    @include screen( mobile ) {
+      display: none;
+    }
+    @include screen( tablet ) {
+      display: none;
+    }
   }
 
   p {
@@ -157,6 +167,15 @@ textarea {
 
 .sub-title {
   color: $gray-500;
+  font-family: $f-roboto;
+  font-size: map.get( $f-font-size, "medium");
+  font-weight: map.get($f-font-weight, "bold" );
+}
+
+.info {
+  font-family: $f-roboto;
+  font-size: map.get( $f-font-size, "small");
+  font-weight: map.get($f-font-weight, "medium" );
 }
 
 .output-text {

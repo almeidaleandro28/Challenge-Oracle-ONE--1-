@@ -190,11 +190,23 @@ textarea {
   .show {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
   }
 }
 .show .img {
-  width: 30%;
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+}
+@media screen and (max-width: 594px) {
+  .show .img {
+    display: none;
+  }
+}
+@media screen and (max-width: 960px) {
+  .show .img {
+    display: none;
+  }
 }
 .show p {
   color: #495057;
@@ -215,6 +227,15 @@ textarea {
 
 .sub-title {
   color: #343A40;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.441rem;
+  font-weight: 700;
+}
+
+.info {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.953rem;
+  font-weight: 500;
 }
 
 .output-text {
