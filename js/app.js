@@ -1,30 +1,3 @@
-<<<<<<< HEAD
-const textArea = document.querySelector(".textarea");
-const text = document.querySelector(".text-result");
-
-const btnEncrypt = document.querySelector(".btn-encrypt");
-const btnDecrypt = document.querySelector(".btn-decrypt");
-const btnCopy = document.querySelector(".btn-copy"); 
-
-const rightHeader = document.querySelector(".right-header");
-const rightFooter = document.querySelector(".right-footer");
-
-const textTransform = document.querySelector(".text-change");
-
-const changeDisplay = () => {
-  rightFooter.style.display = "none";
-  rightHeader.style.display = "none";
-  textTransform.style.display = "block";
-	btnCopy.style.display = "block";
-}
-// A letra "e" é convertida para "enter"
-// A letra "i" é convertida para "imes"
-// A letra "a" é convertida para "ai"
-// A letra "o" é convertida para "ober"
-// A letra "u" é convertida para "ufat"
-const encrypt = () => {
-	const textEncrypt = textArea.value.replace(/e/g, "enter").
-=======
 // elements section left
 const divShow = document.querySelector(".show");
 const subTitle = document.querySelector(".sub-title");
@@ -52,18 +25,12 @@ const changeDisplay = () => {
 
 const encrypty = () => {
   const textEncrypt = textArea.value.replace(/e/g, "enter").
->>>>>>> mobile
 																		replace(/i/g, "imes").
 																		replace(/a/g, "ai").
 																		replace(/o/g, "ober").
 																		replace(/u/g, "ufat");
-<<<<<<< HEAD
-	text.innerHTML = textEncrypt; 
-	
-=======
   console.log( textEncrypt );
 	outputText.innerHTML = textEncrypt; 
->>>>>>> mobile
 }
 
 const decrypty = () => {
@@ -72,33 +39,6 @@ const decrypty = () => {
 																			replace(/ai/g, "a").
 																			replace(/ober/g, "o").
 																			replace(/ufat/g, "u");
-<<<<<<< HEAD
-	text.innerHTML = textDecrypt;
-}
-
-
-// btn actions
-btnEncrypt.addEventListener( "click",  function() {
-  changeDisplay();
-	encrypt();
-});
-
-btnDecrypt.addEventListener( "click", function() {
-	changeDisplay();
-	decrypty();
-});
-
-const copyText = () => {
-	text.select();
-	navigator.clipboard.writeText(text.value);
-}
-
-
-btnCopy.addEventListener( "click", function() {
-	copyText();
-} );
-
-=======
   console.log( textDecrypt );
 	outputText.innerHTML = textDecrypt;
 }
@@ -124,4 +64,4 @@ btnDecrypt.addEventListener( "click", function() {
 btnCopy.addEventListener( "click", function() {
 	copy();
 });
->>>>>>> mobile
+
