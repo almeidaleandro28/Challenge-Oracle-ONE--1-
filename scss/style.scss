@@ -37,7 +37,7 @@ textarea {
     margin: 0 auto;
     max-width: 1200px;
     height: 900px;
-    border: 1px solid #000000;
+   
   }
 
   @include screen( tablet ) {
@@ -63,7 +63,8 @@ textarea {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    flex: 1
+    flex: 1;
+    padding-left: 3rem;
   }
   @include screen( mobile ) {
     display: flex;
@@ -84,10 +85,17 @@ textarea {
 
 .input {
   width: 100%;
+  @include screen( pc ) {
+    margin-bottom: 25rem;
+    width: 90%;
+  }
   .input-text {
-    width: 100%;
+    background-color: $dark-blue-100;
+    color: $white;
+    width: 100%;  
   }
 }
+
 
 .buttons {
   @include screen( tablet ) {
@@ -98,6 +106,9 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 8px;
+  }
+  @include screen( pc ) {
+    margin-bottom: 4rem;
   }
 }
 
@@ -191,6 +202,7 @@ textarea {
   width: 100%;
   display: none;
   @include screen( pc ) {
-
+    justify-self: flex-end;
+    margin-top: 35rem;
   }
 }
