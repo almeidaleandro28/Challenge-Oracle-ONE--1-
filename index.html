@@ -5,49 +5,43 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/style.css">
-  <title>Alura challenge - 1 </title>
+  <!-- font roboto -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+  <title>Challenge Oracle One - 1 </title>
 </head>
 <body>
   <main class="main">
     <div class="container">
-      <section class="section-left">
-        <div class="brand">
-        <img class="logo" src="./img/brand-alura.svg" alt="logo a">
-        </div><!--end brand-->
-        <div class="text">
-          <textarea class="textarea" name="textarea" id="" cols="15" rows="20" placeholder="Type here"></textarea>
-        </div><!--end text-->
+      <section class="left">
+        <header class="header">
+          <img class="header-brand" src="./img/brand-alura.svg" alt="logo alura">
+        </header><!--end header-->
+        <div class="input">
+          <textarea class="input-text" name="" id="" cols="30" rows="10" placeholder="type a text here"></textarea>
+        </div><!--end input-->
         <div class="buttons">
-        <button class="btn btn-encrypt" type="submit">encrypty</button>
-        <button class="btn btn-decrypt" type="submit">decrypt</button>   
+          <button class="btn btn-encrypt">encrypt</button>
+          <button class="btn btn-decrypt">decrypt</button>
         </div><!--end buttons-->
-      </section>
-      <!-- end section left -->
-      <section class="section-right">
-        <div class="container-right">
-        <div class="text-change">
-          <textarea class="text-result" id="" cols="30" rows="10"></textarea>
-          <!-- <p class="text-result">hello</p> -->
-        </div>
-        <div class="right-header">        
-          <img class="message-img" src="./img/banner-2.svg" alt="">
-        </div>
-        <!-- end right header -->
-        <div class="right-footer">
-          <h2>no messages found</h2>
-          <h3>enter a text to decrypt or decrypt</h3>
-        </div>
-        <!-- end right footer -->
-        <div class="btn-container">
-          <button class="btn btn-copy" type="submit">copy</button>
-        </div>
-        <!-- end btn container -->
-        </div><!--end container right-->
-      </section>
-      <!-- end section right -->
-    </div><!--end container-->
+      </section><!--end section left-->
+      <section class="right">
+        <div class="show">
+          <img class="img" src="./img/banner-2.svg" alt="boy with a magnifying glass">
+          <h2 class="sub-title">
+            no message typed
+          </h2>
+          <p class="info">
+            enter a text to encrypt or decrypt
+          </p>
+          <textarea class="output-text" name="" id="" cols="30" rows="10"></textarea>
+          <button class="btn btn-copy">copy</button>
+        </div><!--end show-->
+      </section><!--end section right-->
+    </div>
+    <!-- end container -->
   </main>
   <!-- end main -->
 <script src="./js/app.js"></script>
 </body>
 </html>
+
