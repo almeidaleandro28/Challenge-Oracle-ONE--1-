@@ -1,17 +1,22 @@
-@mixin screen($device) {
-  @if ($device == mobile ) {
-    @media screen and ( max-width: 594px ) {
-      @content;
-    }
-  }
-  @if ( $device == tablet ) {
-    @media screen and ( max-width: 960px ) {
-      @content;
-    }
-  }
-  @if ( $device == pc ) {
-    @media screen and ( min-width: 1000px ) {
-      @content;
-    }
-  }
+@mixin device( $size ) {
+  @if($size == phone ){
+		@media screen and ( max-width: 576px ) {
+			@content;
+		}
+	}
+	@if($size == tablet ){
+		@media screen and (min-width: 578px) and ( max-width: 768px ) {
+			@content;
+		}
+	}
+	@if($size == desktops){
+		@media screen and (min-width: 768px ) and ( max-width: 992px) {
+			@content;
+		}
+	}
+	@if($size == large-dekstop ){
+		@media screen and ( min-width: 992px ) {
+			@content;
+		}
+	}
 }
