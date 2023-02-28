@@ -1,9 +1,10 @@
-/* Error: expected "}".
- *     ,
- * 119 | }
- *     |  ^
- *     '
- *   scss/style.scss 119:2  root stylesheet */
+/* Error: There is no module with the namespace "map".
+ *   ,
+ * 4 |   font-size: map.get( $f-font-size, "medium");
+ *   |              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ *   '
+ *   scss/_typograph.scss 4:14  @import
+ *   scss/style.scss 4:9        root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -13,5 +14,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: 'Error: expected "}".\a     \2577 \a 119 \2502  }\a     \2502   ^\a     \2575 \a   scss/style.scss 119:2  root stylesheet';
+  content: 'Error: There is no module with the namespace "map".\a   \2577 \a 4 \2502    font-size: map.get( $f-font-size, "medium");\a   \2502               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   scss/_typograph.scss 4:14  @import\a   scss/style.scss 4:9        root stylesheet';
 }
