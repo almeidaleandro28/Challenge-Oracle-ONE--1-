@@ -1,15 +1,9 @@
-/* Error: Undefined mixin.
- *    ,
- * 30 | /   @include screen( pc ) {
- * 31 | |     display: flex;
- * 32 | |     flex-direction: row;
- * 33 | |     margin: 0 auto;
- * 34 | |     max-width: 1200px;
- * 35 | |     height: 900px;
- * 36 | |    
- * 37 | \   }
- *    '
- *   scss/style.scss 30:3  root stylesheet */
+/* Error: expected "}".
+ *     ,
+ * 119 | }
+ *     |  ^
+ *     '
+ *   scss/style.scss 119:2  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -19,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a    \2577 \a 30 \2502  \250c    @include screen( pc ) {\a 31 \2502  \2502      display: flex;\a 32 \2502  \2502      flex-direction: row;\a 33 \2502  \2502      margin: 0 auto;\a 34 \2502  \2502      max-width: 1200px;\a 35 \2502  \2502      height: 900px;\a 36 \2502  \2502     \a 37 \2502  \2514    }\a    \2575 \a   scss/style.scss 30:3  root stylesheet";
+  content: 'Error: expected "}".\a     \2577 \a 119 \2502  }\a     \2502   ^\a     \2575 \a   scss/style.scss 119:2  root stylesheet';
 }

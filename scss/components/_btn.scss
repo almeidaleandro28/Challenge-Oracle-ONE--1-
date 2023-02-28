@@ -5,3 +5,20 @@
   padding: 6px 12px;
 }
 
+.btn-encrypt {
+  background-color: $dark-blue-300;
+  border: 1px solid $dark-blue-300;
+
+}
+.btn-decrypt {
+  background-color: $dark-blue-100;
+  border: 1px solid $dark-blue-300;
+}
+
+.btn-copy {
+  background-color: $white;
+  color: $dark-blue-300;
+  margin-bottom: 1rem;
+  width: 100%;
+  display: none;
+}
