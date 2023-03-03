@@ -21,5 +21,18 @@
 	}
 }
 
+.container {
+	margin: 0 auto;
+	max-width: 1200px;
+	position: relative;
+	height: 100%;
+	border: 1px solid white;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr 2fr 2fr;
+	grid-template-rows: auto;
+}
 
 

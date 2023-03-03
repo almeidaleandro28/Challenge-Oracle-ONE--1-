@@ -15,28 +15,11 @@
 
 
 
-html {
-  height: 100vh;
-}
-
 body {
   background-color: $white;
   height: 100vh;
 }
 
-
-.input {
-  width: 100%;
-  @include screen( pc ) {
-    margin-bottom: 25rem;
-    width: 90%;
-  }
-  .input-text {
-    background-color: $dark-blue-100;
-    color: $white;
-    width: 100%;  
-  }
-}
 
 
 
