@@ -1,67 +1,43 @@
 // elements section left
-const divShow = document.querySelector(".show");
 const subTitle = document.querySelector(".sub-title");
-const info = document.querySelector(".info");
+const info = document.querySelector(".right_info");
 // img
-const img = document.querySelector(".img");
+const img = document.querySelector(".right_info_img");
 // input
-const textArea = document.querySelector(".input-text");
+const textInput = document.querySelector(".text-area");
 // output
-const outputText = document.querySelector(".output-text");
+const textOut = document.querySelector(".right_header_text");
 // buttons
 const btnEncrypty = document.querySelector(".btn-encrypt")
 const btnDecrypt = document.querySelector(".btn-decrypt");
 const btnCopy = document.querySelector(".btn-copy");
 
 
-const changeDisplay = () => {
-  subTitle.style.display = "none";
-  info.style.display = "none";
-  img.style.display = "none";
-	btnCopy.style.display = "block";
-	outputText.style.display = "block";
-	
-}
 
 const encrypty = () => {
-  const textEncrypt = textArea.value.replace(/e/g, "enter").
+  const textEncrypt = textInput.value.replace(/e/g, "enter").
 																		replace(/i/g, "imes").
 																		replace(/a/g, "ai").
 																		replace(/o/g, "ober").
 																		replace(/u/g, "ufat");
   console.log( textEncrypt );
-	outputText.innerHTML = textEncrypt; 
+	textOut.innerHTML = textEncrypt; 
 }
 
 const decrypty = () => {
-	const textDecrypt = textArea.value.replace(/enter/g, "e").
+	const textDecrypt = textInput.value.replace(/enter/g, "e").
 																			replace(/imes/g, "i").
 																			replace(/ai/g, "a").
 																			replace(/ober/g, "o").
 																			replace(/ufat/g, "u");
   console.log( textDecrypt );
-	outputText.innerHTML = textDecrypt;
+	textOut.innerHTML = textDecrypt;
 }
 
 const copy = () => {
-	outputText.select();
-	outputText.setSelectionRange(0, 99999)
-	navigator.clipboard.writeText(outputText.value);
-	console.log( outputText.value)
+	textOut.select();
+	textOut.setSelectionRange(0, 99999)
+	navigator.clipboard.writeText(textOut.value);
+	console.log( textOut.value)
 }
-
-
-btnEncrypty.addEventListener( "click", function() {
-  changeDisplay();
-  encrypty();
-});
-
-btnDecrypt.addEventListener( "click", function() {
-  changeDisplay();
-  decrypty();
-});
-
-btnCopy.addEventListener( "click", function() {
-	copy();
-});
 
