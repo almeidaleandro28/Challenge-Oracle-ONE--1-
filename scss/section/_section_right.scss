@@ -12,6 +12,7 @@
 .right_header {
   text-align: center;
   flex: 1;
+  display: none;
   .right_header_text {}
 }
 
@@ -22,11 +23,13 @@
 }
 
 .right_footer {
-  display: flex;
+  // display: flex;
+  display: none;
   padding: 1rem 0;
   // flex: 1;
   border: 1px solid black;
   .right_buttons {
+
 
   }
 }

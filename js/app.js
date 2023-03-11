@@ -1,38 +1,19 @@
-// elements section left
-const subTitle = document.querySelector(".sub-title");
-const info = document.querySelector(".right_info");
-// img
-const img = document.querySelector(".right_info_img");
-// input
-const textInput = document.querySelector(".text-area");
-// output
-const textOut = document.querySelector(".right_header_text");
+import { encrypty, decrypty } from "../js/func.js";
+
 // buttons
 const btnEncrypty = document.querySelector(".btn-encrypt")
 const btnDecrypt = document.querySelector(".btn-decrypt");
 const btnCopy = document.querySelector(".btn-copy");
 
+const text = document.querySelector(".text-area");
+const textEncrypt = document.querySelector(".right_header_text");
+
+const rightHeader = document.querySelector(".right_header");
+const rightInfo = document.querySelector(".right_info");
+const rightFooter = document.querySelector(".right_footer");
 
 
-const encrypty = () => {
-  const textEncrypt = textInput.value.replace(/e/g, "enter").
-																		replace(/i/g, "imes").
-																		replace(/a/g, "ai").
-																		replace(/o/g, "ober").
-																		replace(/u/g, "ufat");
-  console.log( textEncrypt );
-	textOut.innerHTML = textEncrypt; 
-}
 
-const decrypty = () => {
-	const textDecrypt = textInput.value.replace(/enter/g, "e").
-																			replace(/imes/g, "i").
-																			replace(/ai/g, "a").
-																			replace(/ober/g, "o").
-																			replace(/ufat/g, "u");
-  console.log( textDecrypt );
-	textOut.innerHTML = textDecrypt;
-}
 
 const copy = () => {
 	textOut.select();
@@ -41,3 +22,18 @@ const copy = () => {
 	console.log( textOut.value)
 }
 
+btnEncrypty.addEventListener("click", ( e ) =>{
+	e.preventDefault();
+	rightHeader.style.display = "flex";
+	rightInfo.style.display = "none";
+	rightFooter.style.display = "flex";
+	console.log( encrypty(text, textEncrypt) )
+})
+
+btnDecrypt.addEventListener("click", ( e ) => {
+	e.preventDefault();
+	rightHeader.style.display = "flex";
+	rightInfo.style.display = "none";
+	rightFooter.style.display = "flex";
+	console.log( decrypty(text, textEncrypt) )
+})

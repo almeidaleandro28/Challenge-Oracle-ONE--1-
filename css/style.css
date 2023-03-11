@@ -126,13 +126,14 @@ table {
 .right_header {
   text-align: center;
   flex: 1;
+  display: none;
 }
 .right_info {
   flex: 1;
   text-align: center;
 }
 .right_footer {
-  display: flex;
+  display: none;
   padding: 1rem 0;
   border: 1px solid black;
 }
