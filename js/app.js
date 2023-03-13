@@ -15,11 +15,18 @@ const rightFooter = document.querySelector(".right_footer");
 
 
 
-const copy = () => {
-	textOut.select();
-	textOut.setSelectionRange(0, 99999)
-	navigator.clipboard.writeText(textOut.value);
-	console.log( textOut.value)
+const copy = async ( text ) => {
+	try {
+		await navigator.clipboard.writeText( text.innerHTML );
+		alert('text copied')
+	} catch {
+		alert("error in copied")
+	}
+	console.log( text.
+		texto
+	)
+												
+
 }
 
 btnEncrypty.addEventListener("click", ( e ) =>{
@@ -27,7 +34,7 @@ btnEncrypty.addEventListener("click", ( e ) =>{
 	rightHeader.style.display = "flex";
 	rightInfo.style.display = "none";
 	rightFooter.style.display = "flex";
-	console.log( encrypty(text, textEncrypt) )
+	encrypty(text, textEncrypt)
 })
 
 btnDecrypt.addEventListener("click", ( e ) => {
@@ -35,5 +42,9 @@ btnDecrypt.addEventListener("click", ( e ) => {
 	rightHeader.style.display = "flex";
 	rightInfo.style.display = "none";
 	rightFooter.style.display = "flex";
-	console.log( decrypty(text, textEncrypt) )
+	decrypty( text,textEncrypt)
 })
+
+btnCopy.addEventListener("click", () => {
+	copy( textEncrypt )
+});
